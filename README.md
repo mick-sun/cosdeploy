@@ -20,39 +20,7 @@ $ npm install cosdeploy
 $ yarn add cosdeploy
 ```
 
-## Usage
-
-<!-- TODO: Introduction of Usage -->
-
-```javascript
-const cosdeploy = require('cosdeploy')
-const result = cosdeploy('w')
-// result => 'w@zce.me'
-```
-
-## API
-
-<!-- TODO: Introduction of API -->
-
-### cosdeploy(input, options?)
-
-#### input
-
-- Type: `string`
-- Details: name string
-
-#### options
-
-##### host
-
-- Type: `string`
-- Details: host string
-- Default: `'zce.me'`
-
 ## CLI Usage
-
-<!-- TODO: Introduction of CLI -->
-
 Use npx:
 
 ```shell
@@ -75,18 +43,25 @@ Usage:
   $ cosdeploy <input>
 
 Commands:
-  <input>  Sample cli program
+  <input>  init | delete | upload
 
 For more info, run any command with the `--help` flag:
   $ cosdeploy --help
 
 Options:
-  --host <host>  Sample options
-  -h, --help     Display this message
-  -v, --version  Display version number
+  --sid <sid>        用户的 SecretId 
+  --sk <sk>          用户的 SecretKey 
+  --dir <dir>        要上传的COS目录 
+  --bucket <bucket>  存储桶的名称 
+  --region <region>  存储桶所在地域 
+  --domain <domain>  调用操作存储桶和对象的 API 时自定义请求域名 
+  --dist <dist>      本地目录 
+  --del              上传之前是否清空之前的版本 
+  -h, --help         Display this message 
+  -v, --version      Display version number 
 
 Examples:
-  $ cosdeploy w --host zce.me
+  $ cosdeploy upload --del
 ```
 
 ## Contributing
